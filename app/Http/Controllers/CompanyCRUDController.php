@@ -44,7 +44,19 @@ class CompanyCRUDController extends Controller
     //update
 
     public function update(Request $request, $id) {
+        $request->validate([
+            'name'=>'required',
+            'email'=>'required',
+            'address'=>'required'
+        ]);
 
+        $company = Company::find($id);
+        $company->name = $request->name;
+        $company->email = $request->email;
+        $company->address = $request->address;
+        $company->save();
+
+        return redirect()->route('companies.index')->with('success', 'Company has been updated successfully.');
     }
 
 }
