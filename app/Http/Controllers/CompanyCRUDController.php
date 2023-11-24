@@ -59,4 +59,9 @@ class CompanyCRUDController extends Controller
         return redirect()->route('companies.index')->with('success', 'Company has been updated successfully.');
     }
 
+    public function destroy(Company $company) {
+        $company->delete();
+        return redirect()->route('companies.index')->with('success', 'Company has been deleted successfully.');
+    }
+
 }
