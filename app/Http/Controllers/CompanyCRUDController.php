@@ -35,4 +35,16 @@ class CompanyCRUDController extends Controller
         return redirect()->route('companies.index')->with('success', 'Company has been created successfully');
     }
 
+    //edit
+
+    public function edit(Company $company) {
+        return view('companies.edit', compact('company'));
+    }
+
+    //update
+
+    public function update(Request $request, $id) {
+
+    }
+
 }
