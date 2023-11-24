@@ -35,10 +35,10 @@
 
                 @foreach ($companies as $company)
                     <tr>
-                        <td> {{company->id}} </td>
-                        <td> {{company->name}} </td>
-                        <td> {{company->email}} </td>
-                        <td> {{company->address}} </td>
+                        <td>{{ $company->id }}</td>
+                        <td>{{ $company->name }}</td>
+                        <td>{{ $company->email }}</td>
+                        <td>{{ $company->address }}</td>
                     </tr>
                 @endforeach
             </table>
