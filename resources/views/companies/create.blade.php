@@ -25,7 +25,7 @@
                 @csrf
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="form-group">
+                        <div class="form-group my-3">
                             <strong>Company Name</strong>
                             <input type="text" name="name" class="form-control" placeholder="Company Name">
                             @error('name')
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <div class="form-group">
+                        <div class="form-group my-3">
                             <strong>Company Email</strong>
                             <input type="email" name="email" class="form-control" placeholder="Company Email">
                             @error('email')
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <div class="form-group">
+                        <div class="form-group my-3">
                             <strong>Company Address</strong>
                             <input type="text" name="address" class="form-control" placeholder="Company Address">
                             @error('address')
@@ -51,7 +51,9 @@
                             @enderror
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="col-md-12">
+                        <button type="submit" class="mt-3 btn btn-primary">Submit</button>
+                    </div>
                 </div>                
             </form>
         </div>
